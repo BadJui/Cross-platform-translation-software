@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <style>
+        #fullscreen-iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="fullscreen-iframe" src="http://192.168.1.105:8080/Trans.html"></iframe>
+
+    <script>
+        var previousSourceCode = "";
+        setInterval(function() {
+            fetch('http://192.168.1.105:8080/Trans.html')
+                .then(function(response) {
+                    return response.text();
+                })
+                .then(function(data) {
+                    if (data !== previousSourceCode) {
+                        previousSourceCode = data;
+                        refreshIframe(data);
+                    }
+                })
+                .catch(function(error) {
+                    console.log('Error:', error);
+                });
+        }, 500);
+        function refreshIframe(sourceCode) {
+            var iframe = document.getElementById('fullscreen-iframe');
+            iframe.srcdoc = sourceCode;
+        }
+    </script>
+</body>
+</html>
