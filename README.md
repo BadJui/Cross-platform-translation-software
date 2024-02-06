@@ -5,4 +5,5 @@
 API提供方：https://api.pearktrue.cn/<br/>
 在此感谢PearAPI提供的帮助<br/>
 电脑端界面：![电脑端界面](https://github.com/BadJui/Cross-platform-translation-software/assets/105153424/c5cb2f8a-a6ef-43ec-989e-09eba0b87706)
+<br/>
 手机端界面：![手机端界面](https://github.com/BadJui/Cross-platform-translation-software/assets/105153424/d06aeadf-9da1-4513-bcba-07ce9d8c639c)
